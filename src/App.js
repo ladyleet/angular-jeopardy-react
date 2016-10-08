@@ -32,7 +32,7 @@ class App extends Component {
               <div>
                 <h2>{section.title}</h2>
                 <div>
-                  {section.questions.map(question => (<Question q={question.Q} a={question.A} hi={"hi"}></Question>))}
+                  {section.questions.map(question => (<Question q={question.Q} a={question.A}></Question>))}
                 </div>
               </div>
             ))
