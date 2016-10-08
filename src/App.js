@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import logo from './angular.png';
 import './App.css';
 
+const jeopardy = [
+  {
+    title: 'General',
+    questions: [
+      { Q: 'What is the company that created Angular 2?', A: 'Google'},
+      { Q: 'What compiles ESNext for Angular 2?', A: 'TypeScript'},
+    ]
+  },{
+    title: 'Angular-CLI',
+    questions: [
+      { Q: 'What other CLI is angular-cli based off of?', A: 'ember-cli'},
+      { Q: 'What is the command for generating a component?', A: 'ng generate component'},
+    ]
+  }
+];
+
 class App extends Component {
   render() {
     return (
@@ -10,6 +26,12 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Angular Jeopardy</h2>
         </div>
+        {jeopardy.map(section => (
+            <div>
+              <h2>{section.title}</h2>
+            </div>
+          ))
+        }
       </div>
     );
   }
