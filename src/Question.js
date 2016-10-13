@@ -11,7 +11,7 @@ export default class Question extends Component {
       case 'q':
         return ( <div onClick={() => this.setState({ show: 'a'})}>{this.props.q}</div> );
       case 'a':
-        return ( <div>{this.props.a}</div> );
+        return ( this.props.img ? <img src={this.props.img}/> : <div>{this.props.a}</div> );
       default:
         return ( <div onClick={() => this.setState({ show: 'q'})}>Pick Me!</div> );
     }
